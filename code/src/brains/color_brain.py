@@ -56,12 +56,15 @@ class Brain(base.Brain):
         if self.distance_sensors[0].distance < 0.25 or self.distance_sensors[1].distance < 0.25:
                 print("detected an object")
                 # self.vehicle.stop()
-                self.vehicle.pivot_left(0.5)
-                self.vehicle.pivot_left(0.5)
-                self.vehicle.pivot_left(0.5)
-                self.vehicle.pivot_left(0.5)
-                time.sleep(0.1)
-                print("pivoting")
+                while self.distance_sensors[0].distance == 1 or self.distance_sensors[1] == 1:
+                    print("pivoting")
+                    self.vehicle.pivot_left(0.75)
+                # self.vehicle.pivot_left(0.75)
+                # self.vehicle.pivot_left(0.75)
+                # self.vehicle.pivot_left(0.75)
+                # self.vehicle.pivot_left(0.5)
+                # time.sleep(0.1)
+                print("done pivoting")
                 self.vehicle.drive_forward(0.75)
 
         if not stop:
