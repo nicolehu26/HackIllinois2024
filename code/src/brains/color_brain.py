@@ -48,7 +48,7 @@ class Brain(base.Brain):
                 print("moving forward")
                 self.leds[1].on()
                 self.leds[1].off()
-                time.sleep(0.5)
+                time.sleep(0.1)
                 self.leds[1].on()
                 self.leds[1].off()
                 self.vehicle.drive_forward(0.75)
