@@ -9,13 +9,10 @@ def red(camera):
     # Define the color ranges in HSV
     red_lower = np.array([0, 120, 70])
     red_upper = np.array([10, 255, 255])
-    blue_lower = np.array([110, 150, 50])
-    blue_upper = np.array([130, 255, 255])
     # Add more colors as needed
 
     # Create a mask for each color
     red_mask = cv2.inRange(hsv_image, red_lower, red_upper)
-    blue_mask = cv2.inRange(hsv_image, blue_lower, blue_upper)
     # Add more masks for other colors as needed
 
     # Find contours for the red dots

@@ -1,6 +1,8 @@
 from src import camera as camera_module
 import time
 from red import red
+from blue import blue
+from yellow import yellow
 
 if __name__ == '__main__':
 
