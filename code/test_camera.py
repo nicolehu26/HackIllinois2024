@@ -1,5 +1,6 @@
 from src import camera as camera_module
 import time
+from red import red
 
 if __name__ == '__main__':
 
@@ -13,7 +14,7 @@ if __name__ == '__main__':
 
     while time.time() - start_time < total_seconds:
         camera.capture()
-        print(camera.image_array)
-
+        # print(camera.image_array)
+        red(camera)
         time.sleep(max(0, 1/sample_hz -
                        (time.time() - start_time)))
