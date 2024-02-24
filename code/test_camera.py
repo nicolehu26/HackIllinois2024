@@ -18,5 +18,7 @@ if __name__ == '__main__':
         camera.capture()
         # print(camera.image_array)
         red(camera)
+        yellow(camera)
+        blue(camera)
         time.sleep(max(0, 1/sample_hz -
                        (time.time() - start_time)))
