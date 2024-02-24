@@ -58,6 +58,4 @@ class Brain(base.Brain):
         #         self.vehicle.pivot_left(1)
 
         if not stop:
-            self.vehicle.drive_forward(0.25)
-
-        print("done")
+            self.vehicle.drive_forward(0.75)
