@@ -23,39 +23,40 @@ class Brain(base.Brain):
     def logic(self):
         stop = False
 
-        while not stop:
-            if red(self.camera):
-                self.vehicle.stop()
-                self.leds[0].on()
-                self.leds[1].on()
-                self.leds[0].off()
-                self.leds[1].off()
-                stop = True
-                print("stopping...")
-                break
-            
-            if yellow(self.camera):
-                self.vehicle.stop()
-                self.leds[0].on()
-                self.leds[0].off()
-                time.sleep(0.25)
-                self.leds[0].on()
-                self.leds[0].off()
-                self.vehicle.drive_forward(0.5)
+        if red(self.camera):
+            self.vehicle.stop()
+            self.leds[0].on()
+            self.leds[1].on()
+            self.leds[0].off()
+            self.leds[1].off()
+            stop = True
+            print("stopping...")
 
-            if blue(self.camera):
+        if yellow(self.camera):
+            self.vehicle.stop()
+            self.leds[0].on()
+            self.leds[0].off()
+            time.sleep(0.25)
+            self.leds[0].on()
+            self.leds[0].off()
+            self.vehicle.drive_forward(0.25)
+        
+        if blue(self.camera):
                 self.vehicle.stop()
                 self.leds[1].on()
                 self.leds[1].off()
                 time.sleep(0.5)
                 self.leds[1].on()
                 self.leds[1].off()
-                self.vehicle.drive_forward(0.5)
+                self.vehicle.drive_forward(0.25)
 
-            if self.distance_sensors[0].distance < 0.25:
-                    self.vehicle.stop()
-                    self.vehicle.pivot_left(1)
+        if self.distance_sensors[0].distance < 0.50 or self.distance_sensors[1].distance < 0.50:
+                self.vehicle.stop()
+                self.vehicle.drive_backward(0.05)
+                self.vehicle.stop()
+                self.vehicle.pivot_left(1)
 
-            self.vehicle.drive_forward(0.5)
+        if not stop:
+            self.vehicle.drive_forward(0.25)
 
     print("done")
