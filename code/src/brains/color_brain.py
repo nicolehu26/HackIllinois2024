@@ -34,7 +34,7 @@ class Brain(base.Brain):
                 self.vehicle.stop()
                 stop = True
 
-        if self.distance_sensor[0].distance < 0.25:
+        if self.distance_sensors[0].distance < 0.25:
                 self.vehicle.pivot_left(1)
 
         if not stop:
