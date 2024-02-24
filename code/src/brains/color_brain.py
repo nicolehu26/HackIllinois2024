@@ -27,6 +27,7 @@ class Brain(base.Brain):
             self.vehicle.stop()
             self.leds[0].on()
             self.leds[1].on()
+            time.sleep(0.5)
             self.leds[0].off()
             self.leds[1].off()
             stop = True
@@ -42,14 +43,15 @@ class Brain(base.Brain):
         #     self.leds[0].off()
         #     self.vehicle.drive_forward(0.25)
         
-        # if blue(self.camera):
-        #         self.vehicle.stop()
-        #         self.leds[1].on()
-        #         self.leds[1].off()
-        #         time.sleep(0.5)
-        #         self.leds[1].on()
-        #         self.leds[1].off()
-        #         self.vehicle.drive_forward(0.25)
+        if blue(self.camera):
+                self.vehicle.stop()
+                print("moving forward")
+                self.leds[1].on()
+                self.leds[1].off()
+                time.sleep(0.5)
+                self.leds[1].on()
+                self.leds[1].off()
+                self.vehicle.drive_forward(0.75)
 
         # if self.distance_sensors[0].distance < 0.50 or self.distance_sensors[1].distance < 0.50:
         #         self.vehicle.stop()
