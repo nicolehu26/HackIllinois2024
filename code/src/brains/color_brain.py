@@ -53,8 +53,10 @@ class Brain(base.Brain):
                 self.leds[1].off()
                 self.vehicle.drive_forward(0.75)
 
-        if self.distance_sensors[0].distance < 0.25 or self.distance_sensors[1].distance < 0.25:
+        if self.distance_sensors[0].distance < 0.09 or self.distance_sensors[1].distance < 0.09:
                 print("detected an object")
+                self.vehicle.stop()
+                time.sleep(0.1)
                 self.vehicle.pivot_left(0.75)
                 self.vehicle.pivot_left(0.75)
                 self.vehicle.pivot_left(0.75)
