@@ -4,7 +4,8 @@
       "sample_hz": 10
     },
     "human_driver": {},
-    "autonomous": {}
+    "autonomous": {},
+    "color_brain": {}
   },
   "camera": {
     "show_preview": false
@@ -23,8 +24,22 @@
       }
     }
   ],
-  "leds": [{ "pin": 20 }, { "pin": 21 }],
-  "switches": [{ "pin": 2 }, { "pin": 3 }],
+  "leds": [
+    {
+      "pin": 20
+    },
+    {
+      "pin": 21
+    }
+  ],
+  "switches": [
+    {
+      "pin": 2
+    },
+    {
+      "pin": 3
+    }
+  ],
   "vehicle": {
     "motors": {
       "left": {
