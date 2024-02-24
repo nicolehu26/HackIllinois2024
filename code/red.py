@@ -27,6 +27,7 @@ def red(camera):
         if area > dot_area_threshold:
             # Take action for red dot
             print("Red dot detected")
+            return True
             # Execute red dot related action
 
     # Repeat for other colors

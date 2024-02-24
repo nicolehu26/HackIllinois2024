@@ -23,5 +23,5 @@ def yellow(camera):
     for contour in yellow_contours:
         area = cv2.contourArea(contour)
         if area > dot_area_threshold:
-            # Take action for red dot
             print("Yellow dot detected")
+            return True

@@ -26,3 +26,4 @@ def blue(camera):
         area = cv2.contourArea(contour)
         if area > dot_area_threshold:
             print("Blue detected")
+            return True
