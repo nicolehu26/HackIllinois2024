@@ -5,6 +5,7 @@ import sys
 from . import base
 from red import red
 from yellow import yellow
+from blue import blue
 import time
 
 
@@ -21,21 +22,37 @@ class Brain(base.Brain):
 
     def logic(self):
         stop = False
-        if red(self.camera):
-            self.vehicle.stop()
 
+        while not stop:
             if red(self.camera):
                 self.vehicle.stop()
+                self.leds[0].on()
                 self.leds[1].on()
-                time.sleep(5)
-                self.vehicle.drive_forward(0.5)
+                self.leds[0].off()
+                self.leds[1].off()
+                stop = True
+                break
             
             if yellow(self.camera):
                 self.vehicle.stop()
-                stop = True
+                self.leds[0].on()
+                self.leds[0].off()
+                time.sleep(0.25)
+                self.leds[0].on()
+                self.leds[0].off()
+                self.vehicle.drive_forward(0.5)
 
-        if self.distance_sensors[0].distance < 0.25:
-                self.vehicle.pivot_left(1)
+            if blue(self.camera):
+                self.vehicle.stop()
+                self.leds[1].on()
+                self.leds[1].off()
+                time.sleep(0.5)
+                self.leds[1].on()
+                self.leds[1].off()
+                self.vehicle.drive_forward(0.5)
 
-        if not stop:
+            if self.distance_sensors[0].distance < 0.25:
+                    self.vehicle.stop()
+                    self.vehicle.pivot_left(1)
+
             self.vehicle.drive_forward(0.5)
