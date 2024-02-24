@@ -55,7 +55,7 @@ class Brain(base.Brain):
 
         # power on the the LED if the corresponding distance sensor detects it
         for i in range(min(len(self.distance_sensors), len(self.leds))):
-            if self.distance_sensors[i].distance < 0.25:
+            if self.distance_sensors[i].distance < 0.09:
                 self.leds[i].on()
             else:
                 self.leds[i].off()

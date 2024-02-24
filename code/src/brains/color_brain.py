@@ -53,11 +53,14 @@ class Brain(base.Brain):
                 self.leds[1].off()
                 self.vehicle.drive_forward(0.75)
 
-        # if self.distance_sensors[0].distance < 0.50 or self.distance_sensors[1].distance < 0.50:
-        #         self.vehicle.stop()
-        #         self.vehicle.drive_backward(0.05)
-        #         self.vehicle.stop()
-        #         self.vehicle.pivot_left(1)
+        if self.distance_sensors[0].distance < 0.50 or self.distance_sensors[1].distance < 0.50:
+                print("detected an object")
+                self.vehicle.stop()
+                self.vehicle.drive_backward(0.5)
+                self.vehicle.stop()
+                self.vehicle.pivot_left(0.5)
+                print("detected pivoting")
+                self.vehicle.drive_forward(0.75)
 
         if not stop:
             self.vehicle.drive_forward(0.75)
