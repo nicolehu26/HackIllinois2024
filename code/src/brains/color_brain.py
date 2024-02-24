@@ -27,8 +27,8 @@ class Brain(base.Brain):
             if red(self.camera):
                 self.vehicle.stop()
                 self.leds[1].on()
-                time.sleep(10)
-                self.vehicle.drive_forward(1)
+                time.sleep(5)
+                self.vehicle.drive_forward(0.5)
             
             if yellow(self.camera):
                 self.vehicle.stop()
@@ -38,4 +38,4 @@ class Brain(base.Brain):
                 self.vehicle.pivot_left(1)
 
         if not stop:
-            self.vehicle.drive_forward()
+            self.vehicle.drive_forward(0.5)
