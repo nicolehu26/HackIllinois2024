@@ -60,7 +60,7 @@ class Brain(base.Brain):
                 self.vehicle.drive_backward(0.5)
                 self.vehicle.stop()
                 time.sleep(0.1)
-                self.vehicle.pivot_left(0.25)
+                self.vehicle.pivot_left(0.75)
                 print("pivoting")
                 time.sleep(0.1)
                 self.vehicle.drive_forward(0.75)
