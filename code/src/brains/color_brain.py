@@ -3,8 +3,8 @@ import tty
 import termios
 import sys
 from . import base
-from ... import red
-from ... import yellow
+from ...red import red
+from ...yellow import yellow
 import time
 
 
