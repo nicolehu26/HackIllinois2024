@@ -31,6 +31,7 @@ class Brain(base.Brain):
                 self.leds[0].off()
                 self.leds[1].off()
                 stop = True
+                print("stopping...")
                 break
             
             if yellow(self.camera):
@@ -56,3 +57,5 @@ class Brain(base.Brain):
                     self.vehicle.pivot_left(1)
 
             self.vehicle.drive_forward(0.5)
+
+    print("done")
