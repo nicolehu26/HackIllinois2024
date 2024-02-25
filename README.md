@@ -1,4 +1,9 @@
-# Prompt
+# HackIllinois 2024 Hardware Track - Autonomous Vehicle
+
+## Team
+Celina Anwar, Madhumita Narayan, Nicole Hu, Shreya Perumalla
+
+UIUC Computer Science
 
 <p align="center">
   <strong>Autonomous Vehicles</strong>
@@ -47,7 +52,7 @@ Good luck!
 
 ## Our Submission
 
-## What it does
+## What it does / Development
 Using the OpenCV computer vision library and live input from a raspberry pi camera feed, our bot detects areas of a field in need of fertilizing. The bot stops on these areas, represented by the color blue, then moves on. Thus, the bot will not fertilize any areas other than what’s necessary. 
 
 ## How we built it
@@ -76,15 +81,15 @@ Using the OpenCV computer vision library and live input from a raspberry pi came
   - 2 Ultrasonic Distance Sensors
   - 2 Electric Motors
 
-## Challenges we ran into
+## Challenges We Ran Into
 Managed to short-circuit our sensor with only 5 volts
 Configuring our new functions with the “brain”
 
-## Accomplishments that we're proud of/What we learned
+## Accomplishments / What We Learned
 OpenCV computer vision library
 Live input from a raspberry pi camera feed
 
-## What's next for HarvestHer
+## What's Next for HarvestHer
 Add live video feed
 Detect various shades of green or soil conditions
 More sensitive object detection
