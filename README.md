@@ -1,39 +1,8 @@
 # HackIllinois 2024 Hardware Track - Autonomous Vehicle
 
-## Team
-Celina Anwar, Madhumita Narayan, Nicole Hu, Shreya Perumalla
+## Team - Celina Anwar, Madhumita Narayan, Nicole Hu, Shreya Perumalla
 
-UIUC Computer Science
-
-<p align="center">
-  <strong>Autonomous Vehicles</strong>
-</p>
-
-John Deere innovates on behalf of humanity.
-
-It doesn’t matter if you’ve never driven a tractor, mowed a lawn, or operated a dozer. With our role in helping produce food, fiber, fuel, and infrastructure, we work for every single person on the planet.
-
-<div style="display: flex; justify-content: center">
-  <div style="display: flex; flex-direction: column; width: 75%">
-    <p align="center">
-      <em>
-        "We don’t create tech for tech’s sake. There’s purpose behind everything we do, so that our customers have the tools they need to tackle some of the world’s greatest challenges."
-      </em>
-      <br><br>
-      <strong>John May</strong>
-      <br>
-      <em>Chairman and CEO | John Deere</em>
-  </div>
-</div>
-
-Now, let's see what you can build.
-
-<br>
-<br>
-
-<p align="center">
-  <strong>Build your own autonomous vehicle</strong>
-</p>
+## Prompt : Build Your Own Autonomous Vehicle
 
 <br>
 
@@ -50,12 +19,12 @@ Like many problems at John Deere, this prompt requires more than just a software
 
 Good luck!
 
-## Our Submission
+# Our Submission
 
 ## What it does / Development
 Using the OpenCV computer vision library and live input from a raspberry pi camera feed, our bot detects areas of a field in need of fertilizing. The bot stops on these areas, represented by the color blue, then moves on. Thus, the bot will not fertilize any areas other than what’s necessary. 
 
-## How we built it
+## Materials
 - **Vehicle Chassis**
   - 2 Rubber wheels
   - 2 Speed encoders
