@@ -21,6 +21,9 @@ if __name__ == '__main__':
 
     start_time = time.time()
 
+      # Get width and height from the camera object
+    width, height = camera.get_resolution()
+
     while time.time() - start_time < total_seconds:
         camera.capture()
         # print(camera.image_array)
