@@ -21,4 +21,4 @@ if __name__ == '__main__':
         yellow(camera)
         blue(camera)
         time.sleep(max(0, 1/sample_hz -
-                       (time.time() - start_time)))
+                       (time.time() - start_time))) 
