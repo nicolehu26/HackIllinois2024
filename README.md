@@ -51,14 +51,14 @@ Using the OpenCV computer vision library and live input from a raspberry pi came
   - 2 Electric Motors
 
 ## Challenges We Ran Into
-Managed to short-circuit our sensor with only 5 volts
-Configuring our new functions with the “brain”
+- Managed to short-circuit our sensor with only 5 volts
+- Configuring our new functions with the “brain”
 
 ## Accomplishments / What We Learned
-OpenCV computer vision library
-Live input from a raspberry pi camera feed
+- OpenCV computer vision library
+- Live input from a raspberry pi camera feed
 
-## What's Next for HarvestHer
-Add live video feed
-Detect various shades of green or soil conditions
-More sensitive object detection
+## What's Next for HarvestHero
+- Add live video feed
+- Detect various shades of green or soil conditions
+- More sensitive object detection
