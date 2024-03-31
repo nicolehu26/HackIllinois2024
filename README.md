@@ -1,6 +1,6 @@
 # HackIllinois 2024 Hardware Track - Autonomous Vehicle
 
-## Team - Celina Anwar, Madhumita Narayan, Nicole Hu, Shreya Perumalla
+## Team -  Madhumita Narayan, Celina Anwar, Nicole Hu, Shreya Perumalla
 
 ## Prompt : Build Your Own Autonomous Vehicle
 
